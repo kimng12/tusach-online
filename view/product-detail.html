@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Tủ Sách Online</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html" class="logo-link">
+                    <h1>📚 Tủ Sách Online</h1>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm" class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="../index.html" class="nav-link">Trang chủ</a>
+                <a href="../index.html#products" class="nav-link">Sản phẩm</a>
+                <a href="../index.html#about" class="nav-link">Giới thiệu</a>
+                <a href="../index.html#contact" class="nav-link">Liên hệ</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-content">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                </div>
+                
+                <div class="product-info-detail">
+                    <h1 id="product-title"></h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.8/5 - 124 đánh giá)</span>
+                    </div>
+                    
+                    <div class="product-price-detail">
+                        <span id="product-price" class="price"></span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <h3>Mô tả sản phẩm</h3>
+                        <p id="product-description"></p>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3>Đặc điểm nổi bật</h3>
+                        <ul id="product-features">
+                        </ul>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" id="add-to-cart-detail">
+                            <i class="fas fa-shopping-cart"></i>
+                            Thêm vào giỏ hàng
+                        </button>
+                        <button class="buy-now-btn">
+                            <i class="fas fa-bolt"></i>
+                            Mua ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>Sách liên quan</h2>
+            <div class="products-grid" id="related-products">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <script src="../script/products-data.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/product-detail.js"></script>
+</body>
+</html>
+

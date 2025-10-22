@@ -1,0 +1,16 @@
+{
+  "name": "tusach-online",
+  "version": "1.0.0",
+  "description": "Vietnamese Online Bookstore",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "keywords": ["bookstore", "vietnamese", "ecommerce"],
+  "author": "Tủ Sách Online",
+  "license": "MIT"
+}

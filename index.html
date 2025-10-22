@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tủ Sách Online - Khám phá thế giới sách</title>
+    <meta name="description" content="Tủ Sách Online - Cửa hàng sách trực tuyến với hơn 10 danh mục sách phong phú. Văn học Việt Nam, văn học nước ngoài, kinh tế, kỹ năng sống, khoa học và nhiều hơn nữa.">
+    <meta name="keywords" content="sách online, mua sách, văn học, kinh tế, kỹ năng sống, khoa học, thiếu nhi, ngoại ngữ">
+    <meta name="author" content="Tủ Sách Online">
+    <meta property="og:title" content="Tủ Sách Online - Khám phá thế giới sách">
+    <meta property="og:description" content="Cửa hàng sách trực tuyến với hơn 10 danh mục sách phong phú">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tusachonline.com">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&h=630&fit=crop">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BookStore",
+        "name": "Tủ Sách Online",
+        "description": "Cửa hàng sách trực tuyến với hơn 10 danh mục sách phong phú",
+        "url": "https://tusachonline.com",
+        "telephone": "0123 456 789",
+        "email": "tusachonline@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Đường Sách",
+            "addressLocality": "Quận 1",
+            "addressRegion": "TP.HCM",
+            "addressCountry": "VN"
+        },
+        "sameAs": [
+            "https://facebook.com/tusachonline",
+            "https://instagram.com/tusachonline",
+            "https://youtube.com/tusachonline"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo-link">
+                    <h1>📚 Tủ Sách Online</h1>
+                </a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm" class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Trang chủ</a>
+                <a href="#categories" class="nav-link">Danh mục</a>
+                <a href="#products" class="nav-link">Sản phẩm</a>
+                <a href="#about" class="nav-link">Giới thiệu</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+                <a href="view/cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Khám phá thế giới sách</h1>
+                <p>Chọn sách hay, thiết kế đẹp — tri thức và cảm hứng mỗi ngày.</p>
+                <button class="cta-button">Khám phá sách</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Danh mục sách</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="van-hoc-viet-nam">
+                    <div class="category-icon">📖</div>
+                    <h3>Văn học Việt Nam</h3>
+                    <p>Những tác phẩm kinh điển của văn học nước nhà</p>
+                </div>
+                <div class="category-card" data-category="van-hoc-nuoc-ngoai">
+                    <div class="category-icon">🌍</div>
+                    <h3>Văn học nước ngoài</h3>
+                    <p>Tác phẩm văn học nổi tiếng thế giới</p>
+                </div>
+                <div class="category-card" data-category="kinh-te-quan-tri">
+                    <div class="category-icon">💼</div>
+                    <h3>Kinh tế - Quản trị</h3>
+                    <p>Sách về kinh doanh và quản lý doanh nghiệp</p>
+                </div>
+                <div class="category-card" data-category="ky-nang-song">
+                    <div class="category-icon">🌟</div>
+                    <h3>Kỹ năng sống & Phát triển bản thân</h3>
+                    <p>Hướng dẫn phát triển bản thân và kỹ năng</p>
+                </div>
+                <div class="category-card" data-category="tam-ly-tinh-cam">
+                    <div class="category-icon">💝</div>
+                    <h3>Tâm lý - Tình cảm</h3>
+                    <p>Hiểu về tâm lý và các mối quan hệ</p>
+                </div>
+                <div class="category-card" data-category="lich-su-van-hoa">
+                    <div class="category-icon">🏛️</div>
+                    <h3>Lịch sử - Văn hóa</h3>
+                    <p>Khám phá lịch sử và văn hóa nhân loại</p>
+                </div>
+                <div class="category-card" data-category="khoa-hoc-cong-nghe">
+                    <div class="category-icon">🔬</div>
+                    <h3>Khoa học - Công nghệ</h3>
+                    <p>Tri thức khoa học và công nghệ hiện đại</p>
+                </div>
+                <div class="category-card" data-category="thieu-nhi">
+                    <div class="category-icon">👶</div>
+                    <h3>Thiếu nhi</h3>
+                    <p>Sách dành cho trẻ em và thanh thiếu niên</p>
+                </div>
+                <div class="category-card" data-category="giao-duc-hoc-tap">
+                    <div class="category-icon">📚</div>
+                    <h3>Giáo dục - Học tập</h3>
+                    <p>Phương pháp học tập và giáo dục</p>
+                </div>
+                <div class="category-card" data-category="ngoai-ngu">
+                    <div class="category-icon">🗣️</div>
+                    <h3>Sách ngoại ngữ</h3>
+                    <p>Học ngoại ngữ hiệu quả</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2>Sách nổi bật</h2>
+                <button id="show-all-btn" class="cta-button" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Xem tất cả sách</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-product-id="1">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop" alt="Tôi Thấy Hoa Vàng Trên Cỏ Xanh - Nguyễn Nhật Ánh">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tôi Thấy Hoa Vàng Trên Cỏ Xanh</h3>
+                        <p class="product-author">Nguyễn Nhật Ánh</p>
+                        <p class="product-price">85.000₫</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.9/5)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="product-btn view-detail" data-product-id="1">Xem chi tiết</button>
+                            <button class="product-btn add-to-cart" data-product-id="1">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop" alt="Cánh Đồng Bất Tận - Nguyễn Ngọc Tư">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cánh Đồng Bất Tận</h3>
+                        <p class="product-author">Nguyễn Ngọc Tư</p>
+                        <p class="product-price">72.000₫</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.8/5)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="product-btn view-detail" data-product-id="2">Xem chi tiết</button>
+                            <button class="product-btn add-to-cart" data-product-id="2">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="3">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=400&fit=crop" alt="Chí Phèo - Nam Cao">
+                    </div>
+                    <div class="product-info">
+                        <h3>Chí Phèo</h3>
+                        <p class="product-author">Nam Cao</p>
+                        <p class="product-price">58.000₫</p>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.7/5)</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="product-btn view-detail" data-product-id="3">Xem chi tiết</button>
+                            <button class="product-btn add-to-cart" data-product-id="3">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Tủ Sách Online</h2>
+                <p>Tủ Sách Online mang đến những cuốn sách hay, bổ ích và truyền cảm hứng từ khắp nơi trên thế giới. Với hơn 10 danh mục sách phong phú, chúng tôi cam kết mang đến tri thức và cảm hứng cho mọi độc giả!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Giới thiệu</a></li>
+                        <li><a href="#products">Sản phẩm</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Đường Sách, Q.1, TP.HCM</p>
+                        <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                        <p><i class="fas fa-envelope"></i> tusachonline@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tủ Sách Online | Tri thức – Cảm hứng – Phát triển 📚</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/products-data.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
