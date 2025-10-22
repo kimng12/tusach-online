@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             addToCartFromDetail();
             // Redirect to cart page
             setTimeout(() => {
-                window.location.href = 'cart.html';
+                window.location.href = '../view/cart.html';
             }, 1000);
         });
     }
