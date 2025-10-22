@@ -48,46 +48,40 @@ A comprehensive Vietnamese online bookstore built with modern web technologies, 
 ```
 tusach-online/
 ├── index.html              # Homepage with categories and featured products
-├── product-detail.html     # Individual product detail pages
-├── cart.html              # Shopping cart and checkout
-├── styles.css             # Complete styling with responsive design
-├── script.js              # Main JavaScript functionality
-├── product-detail.js      # Product detail page logic
-├── cart.js                # Cart management and checkout
-├── products-data.js       # Comprehensive product database
+├── styles.css              # Complete styling with responsive design
+├── view/
+│   ├── product-detail.html # Individual product detail pages
+│   └── cart.html          # Shopping cart and checkout
+├── script/
+│   ├── script.js          # Main JavaScript functionality
+│   ├── product-detail.js  # Product detail page logic
+│   ├── cart.js            # Cart management and checkout
+│   └── products-data.js   # Comprehensive product database
 └── README.md              # Project documentation
 ```
 
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Storage**: Local Storage (for cart persistence)
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts (Inter)
+- **Responsive**: Mobile-first design
+- **No Backend Required**: Pure client-side application
+
 ## 🚀 Getting Started
 
-### **Option 1: Using a Local Server (Recommended)**
-
-#### **Python Server (Easiest)**
+### **Simple Setup**
 1. **Download** the project files
-2. **Open terminal/command prompt** in the project directory
-3. **Run**: `python server.py`
-4. **Open browser** and go to: `http://localhost:8000`
-
-#### **Node.js Server**
-1. **Install Node.js** if not already installed
-2. **Run**: `npm install` (to install Express)
-3. **Run**: `node server.js`
-4. **Open browser** and go to: `http://localhost:3000`
-
-#### **Windows Users**
-1. **Double-click** `start-server.bat`
-2. **Choose** your preferred server option
-3. **Open browser** and go to the displayed URL
-
-### **Option 2: Direct File Access**
-1. **Open** `index.html` directly in a web browser
-2. **Note**: Some features (like cart navigation) may not work properly without a server
+2. **Open** `index.html` in your web browser
+3. **That's it!** The website is ready to use
 
 ### **Explore the Features**
 - Browse categories by clicking category cards
 - View product details by clicking "Xem chi tiết"
 - Add items to cart and complete checkout
 - Use search functionality
+- All features work without any server setup
 
 ## 📚 Product Categories
 

@@ -1,24 +1,25 @@
 // Cart functionality
-let cartItemsItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-console.log('Cart loaded from localStorage:', cartItemsItems);
+let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+console.log('Cart loaded from localStorage:', cartItems);
 
-// Update cartItems count in header
+// Update cart count in header
 function updateCartCount() {
-    const totalItems = cartItemsItems.reduce((sum, item) => sum + item.quantity, 0);
-    const cartItemsCount = document.querySelector('.cartItems-count');
-    if (cartItemsCount) {
-        cartItemsCount.textContent = totalItems;
+    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    const cartCount = document.querySelector('.cart-count');
+    if (cartCount) {
+        cartCount.textContent = totalItems;
     }
 }
 
-// Render cartItems items
+// Render cart items
 function renderCartItems() {
-    const cartItemsItemsContainer = document.getElementById('cartItems-items');
+    const cartItemsContainer = document.getElementById('cart-items');
+    console.log('renderCartItems called, container:', cartItemsContainer, 'cartItems length:', cartItems.length);
     
     if (cartItems.length === 0) {
-        cartItemsItemsContainer.innerHTML = `
-            <div class="empty-cartItems">
-                <i class="fas fa-shopping-cartItems"></i>
+        cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
                 <h3>Giỏ hàng trống</h3>
                 <p>Hãy thêm một số sách vào giỏ hàng của bạn!</p>
                 <a href="../index.html" class="cta-button">Tiếp tục mua sắm</a>
@@ -27,17 +28,17 @@ function renderCartItems() {
         return;
     }
     
-    cartItemsItemsContainer.innerHTML = '';
+    cartItemsContainer.innerHTML = '';
     
     cartItems.forEach((item, index) => {
-        const cartItemsItem = document.createElement('div');
-        cartItemsItem.className = 'cartItems-item';
-        cartItemsItem.innerHTML = `
-            <img src="${item.image}" alt="${item.title}" class="cartItems-item-image">
-            <div class="cartItems-item-info">
-                <h4 class="cartItems-item-title">${item.title}</h4>
-                <p class="cartItems-item-price">${item.price}</p>
-                <div class="cartItems-item-quantity">
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+            <div class="cart-item-info">
+                <h4 class="cart-item-title">${item.title}</h4>
+                <p class="cart-item-price">${item.price}</p>
+                <div class="cart-item-quantity">
                     <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
                     <input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, 0, this.value)">
                     <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
@@ -45,7 +46,7 @@ function renderCartItems() {
             </div>
             <button class="remove-item" onclick="removeItem(${index})">Xóa</button>
         `;
-        cartItemsItemsContainer.appendChild(cartItemsItem);
+        cartItemsContainer.appendChild(cartItem);
     });
 }
 
@@ -61,7 +62,7 @@ function updateQuantity(index, change, newValue = null) {
     }
     
     // Save to localStorage
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cartItems));
     
     // Re-render cartItems
     renderCartItems();
@@ -69,10 +70,10 @@ function updateQuantity(index, change, newValue = null) {
     updateCartCount();
 }
 
-// Remove item from cartItems
+// Remove item from cart
 function removeItem(index) {
     cartItems.splice(index, 1);
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    localStorage.setItem('cart', JSON.stringify(cartItems));
     renderCartItems();
     updateCartSummary();
     updateCartCount();
@@ -168,7 +169,22 @@ function handleCheckout(event) {
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Cart page loaded, cartItems items:', cartItems);
+    console.log('Cart items length:', cartItems.length);
     
+    // Check if cart-items element exists
+    const cartItemsContainer = document.getElementById('cart-items');
+    console.log('Cart items container:', cartItemsContainer);
+    
+    // Add test items if cart is empty
+    if (cartItems.length === 0) {
+        console.log('Cart is empty, adding test items...');
+        cartItems = [
+            { id: 1, title: "Tôi Thấy Hoa Vàng Trên Cỏ Xanh", price: "85.000₫", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop", quantity: 1 },
+            { id: 2, title: "Cánh Đồng Bất Tận", price: "72.000₫", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop", quantity: 2 }
+        ];
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        console.log('Test items added to cart');
+    }
     
     renderCartItems();
     updateCartSummary();
