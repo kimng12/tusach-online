@@ -257,7 +257,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (cartLink) {
         cartLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = 'view/cart.html';
+            // Check if we're already in the view directory
+            if (window.location.pathname.includes('/view/')) {
+                window.location.href = 'cart.html';
+            } else {
+                window.location.href = 'view/cart.html';
+            }
         });
     }
 
