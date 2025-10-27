@@ -21,7 +21,7 @@ function loadProductData() {
     document.title = `${product.title} - Tủ Sách Online`;
     
     // Update product information
-    document.getElementById('main-product-image').src = product.image;
+    document.getElementById('main-product-image').src = product.image.replace('image/', '../image/');
     document.getElementById('main-product-image').alt = product.title;
     document.getElementById('product-title').textContent = product.title;
     document.getElementById('product-price').textContent = product.price;
@@ -193,7 +193,7 @@ function loadRelatedProducts() {
         
         productCard.innerHTML = `
             <div class="product-image">
-                <img src="${product.image}" alt="${product.title}">
+                <img src="${product.image.replace('image/', '../image/')}" alt="${product.title}">
             </div>
             <div class="product-info">
                 <h3>${product.title}</h3>

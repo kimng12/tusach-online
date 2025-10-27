@@ -34,7 +34,7 @@ function renderCartItems() {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.title}" class="cart-item-image">
+            <img src="${item.image.replace('image/', '../image/')}" alt="${item.title}" class="cart-item-image">
             <div class="cart-item-info">
                 <h4 class="cart-item-title">${item.title}</h4>
                 <p class="cart-item-price">${item.price}</p>
@@ -175,16 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartItemsContainer = document.getElementById('cart-items');
     console.log('Cart items container:', cartItemsContainer);
     
-    // Add test items if cart is empty
-    if (cartItems.length === 0) {
-        console.log('Cart is empty, adding test items...');
-        cartItems = [
-            { id: 1, title: "Tôi Thấy Hoa Vàng Trên Cỏ Xanh", price: "85.000₫", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=400&fit=crop", quantity: 1 },
-            { id: 2, title: "Cánh Đồng Bất Tận", price: "72.000₫", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop", quantity: 2 }
-        ];
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-        console.log('Test items added to cart');
-    }
+    // Cart is empty - no test items needed
     
     renderCartItems();
     updateCartSummary();
