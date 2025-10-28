@@ -395,7 +395,7 @@ const productsData = {
     20: {
         id: 20,
         title: "Cỗ Máy Tri Giác",
-        author: "Jeff Hawkins",
+        author: "Amir Husain",
         price: "160.000₫",
         originalPrice: 160000,
         category: "khoa-hoc-cong-nghe",
